@@ -20,7 +20,7 @@
 (setq doom-font (font-spec :family "Fira Code" :size 15)
       +doom-dashboard-banner-file (expand-file-name "logo.png" doom-private-dir)
       doom-themes-treemacs-theme "doom-colors"
-      treemacs-width 30)
+      treemacs-width 25)
 
 
 
