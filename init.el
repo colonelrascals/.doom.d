@@ -16,9 +16,9 @@
        (company
         +auto
         +childframer)           ; the ultimate code completion backend
-       helm              ; the *other* search engine for love and life
+       ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
-       ;;ivy               ; a search engine for love and life
+       ivy               ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -59,7 +59,7 @@
 
        :emacs
        (dired            ; making dired pretty [functional]
-        +ranger          ; bringing the goodness of ranger to dired
+        ;;ranger          ; bringing the goodness of ranger to dired
         +icons           ; colorful icons for dired-mode
         )
        electric          ; smarter, keyword-based electric-indent
@@ -182,3 +182,19 @@
        ;; provides a Spacemacs-inspired keybinding scheme and a smartparens
        ;; config. Use it as a reference for your own modules.
        (default +bindings +smartparens))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(mode-line ((t (:background "#1c1e24" :box nil :height 0.95))))
+ '(treemacs-directory-collapsed-face ((t (:inherit (variable-pitch treemacs-directory-face) :height 0.9))))
+ '(treemacs-directory-face ((t (:inherit variable-pitch :foreground "#bbc2cf" :height 0.9))))
+ '(treemacs-file-face ((t (:inherit variable-pitch :foreground "#bbc2cf" :height 0.8))))
+ '(treemacs-root-face ((t (:inherit (variable-pitch font-lock-string-face) :weight bold :height 1.0)))))
