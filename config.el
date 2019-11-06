@@ -26,16 +26,25 @@
   (add-to-list 'exec-path "/Users/patrick.hildreth/elixir-ls/release")
   (setq lsp-ui-doc-enable nil))
 
-;; DOOM specific settings
-(setq doom-font (font-spec :family "Fira Code" :size 18)
+;; Setting Treemacs ignore to respect .gitignore
+(with-eval-after-load 'treemacs
+  (defun treemacs-ignore-gitignore (file _)
+    (string= file ".gitignore"))
+  (push #'treemacs-ignore-gitignore treemacs-ignored-file-predicates))
+
+
+;; doom specific settings
+(setq doom-font (font-spec :family "fira code" :size 18)
       +doom-dashboard-banner-file (expand-file-name "logo.png" doom-private-dir)
       doom-themes-treemacs-theme "doom-colors"
       doom-modeline-height 10
       doom-modeline-bar-width 3
+      doom-theme 'doom-opera
       doom-modeline-major-mode-icon t
-      python-shell-interpreter "/usr/local/bin/python3"
+      ;;python-shell-interpreter "/usr/local/bin/python3"
       doom-modeline-buffer-file-name-style 'file-name
-      treemacs-width 25)
+      treemacs-width 25
+      )
 
 
 

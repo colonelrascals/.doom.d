@@ -187,7 +187,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(treemacs-show-hidden-files nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -197,4 +197,5 @@
  '(treemacs-directory-collapsed-face ((t (:inherit (variable-pitch treemacs-directory-face) :height 0.9))))
  '(treemacs-directory-face ((t (:inherit variable-pitch :foreground "#bbc2cf" :height 0.9))))
  '(treemacs-file-face ((t (:inherit variable-pitch :foreground "#bbc2cf" :height 0.8))))
+ '(treemacs-git-ignored-face ((t (:inherit (variable-pitch font-lock-comment-face) :height 0.7))))
  '(treemacs-root-face ((t (:inherit (variable-pitch font-lock-string-face) :weight bold :height 1.0)))))
