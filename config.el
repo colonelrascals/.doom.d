@@ -32,7 +32,22 @@
     (string= file ".gitignore"))
   (push #'treemacs-ignore-gitignore treemacs-ignored-file-predicates))
 
-
+(defun toggle-eshell ()
+    (interactive)
+    (cond ((get-buffer " *eshell*")
+           (interactive)
+           (switch-to-buffer " *eshell*")
+           (rename-buffer "*eshell*")
+           )
+          ((get-buffer "*eshell*")
+           (interactive)
+           (switch-to-buffer "*eshell*")
+           (rename-buffer " *eshell*")
+           (switch-to-buffer (other-buffer (current-buffer) 1))
+           )
+          (t (eshell))
+          )
+    )
 ;; doom specific settings
 (setq doom-font (font-spec :family "fira code" :size 18)
       +doom-dashboard-banner-file (expand-file-name "logo.png" doom-private-dir)
@@ -45,7 +60,6 @@
       doom-modeline-buffer-file-name-style 'file-name
       treemacs-width 25
       )
-
 
 
 ;; Start Emacs in distraction free mode (fullscreen)
