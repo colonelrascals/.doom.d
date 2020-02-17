@@ -59,7 +59,7 @@
 
        :emacs
        (dired            ; making dired pretty [functional]
-        ranger          ; bringing the goodness of ranger to dired
+        +ranger          ; bringing the goodness of ranger to dired
         +icons           ; colorful icons for dired-mode
         )
        electric          ; smarter, keyword-based electric-indent
@@ -87,7 +87,7 @@
        lsp
        ;;macos             ; MacOS-specific commands
        magit             ; a git porcelain for Emacs
-       ;;make              ; run make tasks from Emacs
+       make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
        ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
@@ -108,7 +108,8 @@
        ;;csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
        erlang            ; an elegant language for a more civilized age
-       elixir            ; erlang done right
+       (elixir
+        +lsp)                                ; erlang done right
        elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;;ess               ; emacs speaks statistics
@@ -137,7 +138,8 @@
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       python            ; beautiful is better than ugly
+       (python
+        +lsp)                                ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;rest              ; Emacs as a REST client
